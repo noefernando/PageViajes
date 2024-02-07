@@ -1,0 +1,51 @@
+<div class="container" id="contenedor">
+        <div *ngIf="mostrarHotel" id="PopUp">
+                <div>
+                        <button (click)="cerrar()" id="cerrar"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg></button>
+                        <app-viajes-hotel id="fondoHotel"></app-viajes-hotel>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-6">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/disparo-vertical-hombre-acostado-hamaca-junto-cascada-que-fluye-abajo-colina_181624-2060.jpg?w=740&t=st=1704825167~exp=1704825767~hmac=e6e0ccb92c98a13b3a0cb753e79b516f13a3fd7a4cbb37908b5e9bf446ad7ed0" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/mujeres-jovenes-colocar-yoga-colchonetas-retiro_23-2149386436.jpg?t=st=1704825167~exp=1704825767~hmac=d4894a9b93c9578dfb9f0bedf809c222cd9135e625265730344bd5478f17a818" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/mujer-sombrero-sentado-playa-sillas-hermosa-playa-tropical-mujer-relajandose-playa-tropical-isla-koh-nangyuan_335224-1110.jpg?w=1380&t=st=1704825259~exp=1704825859~hmac=b02368ec0bc47191a00def62b9edb1a4a3cde23cb58fce0cd6bb66cba5314457" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/orilla-mar-arena-viajes-verano_1203-5584.jpg?w=1380&t=st=1704825274~exp=1704825874~hmac=b074c6add6f86a665b1529575a4e7dcd86cc826786ad834f1fa7e6d22fd18121" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/retrato-hermosa-joven-asiatica-relaja-piscina_74190-14442.jpg?w=1380&t=st=1704825296~exp=1704825896~hmac=86508f8716b6fc1bbff19ca923afdda84ea718f640746f0cf8f868b339128e2e" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/tipo-complejo-entretenimiento-popular-complejo-piscinas-parques-acuaticos-turquia-mas-5-millones-visitantes-al-ano-amara-dolce-vita-hotel-lujo-recurso-tekirova-kemer_146671-18728.jpg?w=1380&t=st=1704825317~exp=1704825917~hmac=47f8da3f424ffde97f7b3bb127c2a14081707f6663eadc4b87b699fd2c38a826" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/hermosa-foto-persona-acostada-divan-leyendo-libro-cerca-piscina-plantas-tropicales_181624-4155.jpg?w=1380&t=st=1704825340~exp=1704825940~hmac=b925f4dd8879c3d76cf6cf9e5abfb5a0c7d84330eb252dcc8c4a5a8d104b01c4" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/hermosa-vista-al-aire-libre-sombrilla-silla-alrededor-piscina-hotel-lujo_74190-1052.jpg?w=1380&t=st=1704825366~exp=1704825966~hmac=5b7188dfc86fda9f9d03aebba2e092745da64b0038f7cfc591174f6e3d67d3b2" alt="">
+                                        </div>
+                                        <div class="col-4" (click)="view()">
+                                                <img src="https://img.freepik.com/foto-gratis/piscina_74190-1977.jpg?w=1380&t=st=1704825392~exp=1704825992~hmac=b6220dbb4a42ae0c8eb39c3384862743ab96d15ab105a405ff9ea3cd203f8cfb" alt="">
+                                        </div>                                        
+                                </div>
+                        </div>
+                </div>
+                <div class="col-6">
+                        <!--The div element for the map -->
+                        <div id="map"></div>
+
+                        <!-- prettier-ignore -->
+                        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+                        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
+                </div>
+        </div>
+</div>
